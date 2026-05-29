@@ -31,6 +31,17 @@ The transition felt natural: modern biology runs on data, and some of my most sa
 
 <h1>👨‍💻 Projects</h1>
 
+<h2>Data Engineering</h2>
+
+## [<b>Data Acquisition Pipeline</b>](https://github.com/Ummethum/data-acquisition-pipeline)
+  - Local ETL pipeline collecting city demographics, weather forecasts, and flight arrivals from Wikipedia and two REST APIs, storing results in a normalised MySQL database. Built as Phase 1 of a cloud migration project for a fictional e-scooter company optimising fleet deployment.
+  - ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white) ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white) ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup4-4EABE1?style=for-the-badge&logo=python&logoColor=white)
+  - Details
+    - <b>Business Context</b>: E-scooter demand is shaped by weather, tourist arrivals, and city geography. The pipeline feeds those signals into fleet repositioning decisions.
+    - <b>Web Scraping</b>: Extracted city metadata and population from Wikipedia infoboxes using BeautifulSoup, navigating inconsistent HTML structures.
+    - <b>API Integration</b>: Used OpenWeatherMap (5-day / 3-hour forecasts) and AeroDataBox (airport discovery, tomorrow's arrivals)
+    - <b>Data Modelling</b>: Designed a SQL schema with foreign key chains across five tables: <code>cities</code>, <code>city_populations</code>, <code>city_weather_forecast</code>, <code>airports</code>, <code>flights</code>.
+
 <h2>Data Analytics</h2>
 
 ## [<b>Market Expansion Data Study</b>](https://github.com/Ummethum/ecommerce-expansion-analysis)
