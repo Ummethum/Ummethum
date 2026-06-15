@@ -22,6 +22,7 @@ The transition felt natural: modern biology runs on data, and some of my most sa
 ![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![Seaborn](https://img.shields.io/badge/Seaborn-4EABE1?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 ![Interactive Dashboards](https://img.shields.io/badge/Interactive_Dashboards-blueviolet?style=for-the-badge&logo=tableau&logoColor=white)
@@ -30,6 +31,17 @@ The transition felt natural: modern biology runs on data, and some of my most sa
 
 
 <h1>👨‍💻 Projects</h1>
+
+<h2>Machine Learning</h2>
+
+## [<b>Audio Feature Clustering</b>](https://github.com/Ummethum/audio-feature-clustering)
+  - Unsupervised machine learning pipeline that clusters 5,114 Spotify songs by audio features and automatically creates playlists via the Spotify API. Each playlist contains between 50 and 250 songs with similar audio profiles.
+  - ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Spotipy](https://img.shields.io/badge/Spotipy-1DB954?style=for-the-badge&logo=spotify&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+  - Details
+    - <b>Approach</b>: K-Means clustering with iterative subclustering &rarr; oversized clusters (>250 songs) are recursively split at k=4, clusters below 50 songs are discarded.
+    - <b>Result</b>: 36 playlists with 58–228 songs each. Clusters are internally consistent by audio profile, though some span multiple genres &rarr; audio features alone cannot substitute a human curator.
+    - <b>Scaling</b>: Compared MinMaxScaler, StandardScaler, and RobustScaler &rarr; MinMaxScaler and StandardScaler performed best.
+    - <b>Spotify Integration</b>: Authenticated via SpotifyOAuth and uploaded playlists automatically using Spotipy, with batched track additions to stay within API limits.
 
 <h2>Data Engineering</h2>
 
