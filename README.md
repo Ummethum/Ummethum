@@ -34,6 +34,15 @@ The transition felt natural: modern biology runs on data, and some of my most sa
 
 <h2>Machine Learning</h2>
 
+## [<b>RespiWatch</b>](https://github.com/Ummethum/respiwatch)
+  - End-to-end forecasting system predicting Influenza incidence 1-2 weeks into the future for all ~400 German Kreise, combining ~20 years of RKI surveillance data with weather, pollen, and Google Trends signals, served through a public Streamlit dashboard.
+  - ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![XGBoost](https://img.shields.io/badge/XGBoost-red?style=for-the-badge) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+  - Details
+    - <b>Approach</b>: Prophet seasonal baseline per Kreis, log-transformed to prevent off-season overshoot, corrected by an XGBoost residual model trained on weather, search trends, wastewater surveillance, and holiday data — deliberately excluding recent raw case counts as a feature, since those carry the same real-world reporting lag the whole project works around.
+    - <b>Result</b>: Validated against a genuinely held-out final 15% of the historical data. Reliably detects the onset and timing of a seasonal wave; exact peak height is still systematically underestimated, a known tree-ensemble limitation only partially mitigated here.
+    - <b>Data engineering</b>: Automated weekly pipeline across 8+ heterogeneous sources (SOAP APIs, GitHub-hosted open data, REST weather APIs)
+    - <b>Deployment</b>: Weekly cron pipeline pushes data to a Hugging Face Dataset repo; the Streamlit app reads exclusively from there at runtime
+
 ## [<b>Audio Feature Clustering</b>](https://github.com/Ummethum/audio-feature-clustering)
   - Unsupervised machine learning pipeline that clusters 5,114 Spotify songs by audio features and automatically creates playlists via the Spotify API. Each playlist contains between 50 and 250 songs with similar audio profiles.
   - ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Spotipy](https://img.shields.io/badge/Spotipy-1DB954?style=for-the-badge&logo=spotify&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
