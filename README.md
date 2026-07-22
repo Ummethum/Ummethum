@@ -34,7 +34,7 @@ The transition felt natural: modern biology runs on data, and some of my most sa
 
 <h2>Machine Learning</h2>
 
-## [<b>RespiWatch</b>](https://github.com/Ummethum/respiwatch)
+## [<b>RespiWatch</b>](https://github.com/Ummethum/respi-watch)
   - End-to-end forecasting system predicting Influenza incidence 1-2 weeks into the future for all ~400 German Kreise, combining ~20 years of RKI surveillance data with weather, pollen, and Google Trends signals, served through a public Streamlit dashboard.
   - ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![XGBoost](https://img.shields.io/badge/XGBoost-red?style=for-the-badge) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
   - Details
