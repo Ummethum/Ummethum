@@ -13,6 +13,7 @@ I'm currently completing a 17-week full-time Data Science programme at WBS Codin
 - **ETL Pipelines, Web Scraping & APIs**: data extraction and transformation
 - **Google Cloud Platform**: scalable data infrastructure
 - **Scikit-learn**: supervised and unsupervised machine learning
+- **Generative AI & RAG**: building retrieval-augmented chatbots grounded in domain-specific sources (LlamaIndex, LLM APIs)
 
 The transition felt natural: modern biology runs on data, and some of my most satisfying moments in the lab were less about pipetting and more about making sense of what the numbers were actually saying.
 
@@ -26,6 +27,8 @@ The transition felt natural: modern biology runs on data, and some of my most sa
 ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 ![Interactive Dashboards](https://img.shields.io/badge/Interactive_Dashboards-blueviolet?style=for-the-badge&logo=tableau&logoColor=white)
+![LlamaIndex](https://img.shields.io/badge/LlamaIndex-RAG-purple?style=for-the-badge)
+![Groq](https://img.shields.io/badge/Groq-LLM_Inference-orange?style=for-the-badge)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 
@@ -51,6 +54,16 @@ The transition felt natural: modern biology runs on data, and some of my most sa
     - <b>Result</b>: 36 playlists with 58–228 songs each. Clusters are internally consistent by audio profile, though some span multiple genres &rarr; audio features alone cannot substitute a human curator.
     - <b>Scaling</b>: Compared MinMaxScaler, StandardScaler, and RobustScaler &rarr; MinMaxScaler and StandardScaler performed best.
     - <b>Spotify Integration</b>: Authenticated via SpotifyOAuth and uploaded playlists automatically using Spotipy, with batched track additions to stay within API limits.
+
+<h2>Generative AI</h2>
+ 
+## [<b>Respiratory Disease Knowledge Assistant</b>](https://github.com/Ummethum/respi-rag-assistant)
+  - Retrieval-augmented chatbot answering questions about respiratory diseases in Germany strictly from official sources (RKI Falldefinitionen, the AMELAG wastewater-surveillance guide, the Infektionsschutzgesetz, the RKI Jahrbuch 2024) plus curated Wikipedia articles. Companion knowledge layer for the RespiWatch forecasting project.
+  - ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![LlamaIndex](https://img.shields.io/badge/LlamaIndex-RAG-purple?style=for-the-badge) ![Groq](https://img.shields.io/badge/Groq-Llama_3.3_70B-orange?style=for-the-badge) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+  - Details
+    - <b>Approach</b>: Source-aware chunking (different chunk size/overlap per document type), multilingual HuggingFace embeddings, and targeted page-range extraction from a 200+ page annual report instead of indexing it wholesale.
+    - <b>Result</b>: A grounded chatbot with conversational memory (`CondensePlusContextChatEngine`) that answers only from retrieved context and explicitly says so when the context is insufficient, important for anything touching legal or medical definitions.
+    - <b>Deployment</b>: Index built and embedded offline, published to a Hugging Face Dataset repo; the Streamlit app reads exclusively from there at runtime, same pattern as RespiWatch.
 
 <h2>Data Engineering</h2>
 
