@@ -57,7 +57,7 @@ The transition felt natural: modern biology runs on data, and some of my most sa
 
 <h2>Generative AI</h2>
  
-## [<b>Respiratory Disease Knowledge Assistant</b>](https://github.com/Ummethum/respi-rag-assistant)
+## [<b>Respiratory Disease Knowledge Assistant</b>](https://github.com/Ummethum/chatbot)
   - Retrieval-augmented chatbot answering questions about respiratory diseases in Germany strictly from official sources (RKI Falldefinitionen, the AMELAG wastewater-surveillance guide, the Infektionsschutzgesetz, the RKI Jahrbuch 2024) plus curated Wikipedia articles. Companion knowledge layer for the RespiWatch forecasting project.
   - ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![LlamaIndex](https://img.shields.io/badge/LlamaIndex-RAG-purple?style=for-the-badge) ![Groq](https://img.shields.io/badge/Groq-Llama_3.3_70B-orange?style=for-the-badge) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
   - Details
